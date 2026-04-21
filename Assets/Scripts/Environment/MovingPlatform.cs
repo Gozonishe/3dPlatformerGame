@@ -7,7 +7,7 @@ public class MovingPlatform : MonoBehaviour
     public Transform pointB;
 
     [Header("Movement")]
-    public float speed = 0.25f;
+    public float speedMultiplier = 0.25f;
     public float waitTimeAtPoints = 3f;
 
     private bool waitingAtPoint = false;
@@ -21,7 +21,7 @@ public class MovingPlatform : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (waitingAtPoint)
         {
@@ -47,7 +47,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (movingTowardB)
         {
-            percentMoved += speed * Time.deltaTime;
+            percentMoved += speedMultiplier * Time.deltaTime;
             if (percentMoved >= 1)
             {
                 movingTowardB = false;
@@ -55,7 +55,7 @@ public class MovingPlatform : MonoBehaviour
             }
         } else
         {
-            percentMoved -= speed * Time.deltaTime;
+            percentMoved -= speedMultiplier * Time.deltaTime;
             if (percentMoved <= 0)
             {
                 movingTowardB = true;

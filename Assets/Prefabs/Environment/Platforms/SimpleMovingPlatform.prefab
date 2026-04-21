@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785603898090146192}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.2315063, y: 40.686035, z: -2.236206}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -106,15 +106,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4216859302048453862, guid: e9cf56ef5a73df8438625f94a2d122b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.960938
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e9cf56ef5a73df8438625f94a2d122b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e9cf56ef5a73df8438625f94a2d122b1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e9cf56ef5a73df8438625f94a2d122b1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -167,6 +167,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: e9cf56ef5a73df8438625f94a2d122b1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2710376462536634350}
+    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: e9cf56ef5a73df8438625f94a2d122b1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3982132860799812762}
   m_SourcePrefab: {fileID: 100100000, guid: e9cf56ef5a73df8438625f94a2d122b1, type: 3}
 --- !u!4 &336557009602826102 stripped
 Transform:
@@ -285,3 +288,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e06a545f476f24db8bc1dd957a2a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerChilder
+--- !u!114 &3982132860799812762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3670689924452826469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274a62ec745f348468a2c1e1fb0d7fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  pointA: {fileID: 4128279449683426449}
+  pointB: {fileID: 4067424694669545182}
+  speedMultiplier: 0.25
+  waitTimeAtPoints: 1
