@@ -61,6 +61,11 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -87,9 +92,11 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &1355926737464651830
 MonoBehaviour:
@@ -187,11 +194,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0568fd8345972489c71c7885b01264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileGameObject: {fileID: 5227786296433408069, guid: b61f4e99b75d3004da582b9a168d9850,
-    type: 3}
+  projectileGameObject: {fileID: 5227786296433408069, guid: b61f4e99b75d3004da582b9a168d9850, type: 3}
   childProjectileToFireLocation: 0
-  fireEffect: {fileID: 7262948918597865689, guid: 8f8587cb513460d44b7525041408e15a,
-    type: 3}
+  fireEffect: {fileID: 7262948918597865689, guid: 8f8587cb513460d44b7525041408e15a, type: 3}
   fireLocationTransform: {fileID: 759374757624378930}
   fireDelay: 0.02
   fireType: 0
@@ -330,6 +335,11 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -351,13 +361,15 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &7200353458493250930
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -371,6 +383,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -478,10 +491,8 @@ MonoBehaviour:
   maximumLives: 5
   respawnWaitTime: 3
   isInvincible: 0
-  deathEffect: {fileID: 6296194425104371975, guid: e4d29f2ec163eac4cbaa0d8586a8abc0,
-    type: 3}
-  hitEffect: {fileID: 1338576432689925465, guid: 2d26d9deb43a9444abf32020e1a0ebe9,
-    type: 3}
+  deathEffect: {fileID: 6296194425104371975, guid: e4d29f2ec163eac4cbaa0d8586a8abc0, type: 3}
+  hitEffect: {fileID: 1338576432689925465, guid: 2d26d9deb43a9444abf32020e1a0ebe9, type: 3}
 --- !u!195 &7200353458635201374
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -554,7 +565,7 @@ MonoBehaviour:
   returnPositionTransform: {fileID: 0}
   hitWithLineOfSight:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
 --- !u!114 &967077018284104040
 MonoBehaviour:
   m_ObjectHideFlags: 0
